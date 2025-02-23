@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // If the user is on a phone or tablet, display the black screen with "Skill Issue"
     if (isMobileDevice()) {
-        document.body.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: black; color: white; font-size: 2em;">Skill Issue</div>';
+        document.body.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100vh; width: 100vw; background-color: black; color: white; font-size: 2em;">I hate mobile users</div>';
         return;
     }
 
