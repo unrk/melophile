@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const contentDiv = document.querySelector('.content');
     let activeContentId = null;
 
+    // Function to detect if the user is on a phone or tablet
+    function isMobileDevice() {
+        return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // If the user is on a phone or tablet, display the black screen with "Skill Issue"
+    if (isMobileDevice()) {
+        document.body.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: black; color: white; font-size: 2em;">Skill Issue</div>';
+        return;
+    }
+
     taskbarIcons.forEach(icon => {
         icon.addEventListener('click', function(event) {
             event.preventDefault();
